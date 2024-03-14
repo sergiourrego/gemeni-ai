@@ -29,7 +29,36 @@ To run this project locally, follow these steps:
 
     ```bash
     cd server
+    ```
+
+    ```bash
+    cp .env.example .env.local
+    ```
+
+    ```bash
+    python -m venv venv
+    ```
+
+    **On Windows**:
+    ```bash
+    venv\Scripts\activate
+    ```
+
+    **On Unix or MacOS**:
+    ```bash
+    source venv/bin/activate
+    ```
+
+    **For Deactivate**:
+    ```bash
+    Deactivate
+    ```
+
+    ```bash
     pip install -r requirements.txt
+    ```
+
+    ```bash
     python gapp.py
     ```
 
@@ -63,3 +92,11 @@ Contributions are welcome! Please adhere to the following steps:
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 Feel free to customize this README.md file further according to your project's specific details and requirements.
+
+## Additional Notes 📝
+
+- The `venv` directory is a virtual environment used to isolate the project's dependencies from the system's installed packages.
+- The `gapp.py` script is the entry point for the Flask application.
+- The `requirements.txt` file lists the required Python packages for the project.
+- The `npm install` command installs the necessary Node.js packages for the frontend application.
+- The `npm run dev` command starts the development server for the frontend application.
