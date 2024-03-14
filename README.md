@@ -33,7 +33,7 @@ To run this project locally, follow these steps:
     python gapp.py
     ```
 
-    **(Optional) If you want to install new dependencies**
+    **(Optional) If you want to install new dependencies**:
 
     ```bash
         pip install --upgrade --force-reinstall -r requirements.txt
