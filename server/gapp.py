@@ -22,9 +22,6 @@ def generate_text():
     prompt = data.get('prompt')
     response = gemini_pro.generate_content(prompt)
 
-    # Log generated text to WandB
-    print({"text": response.text})
-
     # Convert the response to a serializable format
     response_data = {
         'text': response.text,
