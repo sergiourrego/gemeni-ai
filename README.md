@@ -65,7 +65,7 @@ To run this project locally, follow these steps:
     **(Optional) If you want to install new dependencies**:
 
     ```bash
-        pip install --upgrade --force-reinstall -r requirements.txt
+    pip install --upgrade --force-reinstall -r requirements.txt
     ```
 
 3. **Install frontend dependencies**:
