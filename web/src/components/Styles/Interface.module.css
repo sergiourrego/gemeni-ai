@@ -1,0 +1,9 @@
+Form {
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+textarea {
+    height: 52px;
+    overflow-y: auto;
+}
