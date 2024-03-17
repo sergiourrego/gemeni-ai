@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react';
 import PropTypes from 'prop-types';
-import styles from "../Styles/ImageInput.module.css";
+import styles from '../Styles/ImageInput.module.css'
 
 interface ImageInputProps {
   imageFile: File | null;
@@ -10,9 +10,13 @@ interface ImageInputProps {
 const ImageInput: React.FC<ImageInputProps> = ({ imageFile, handleImageChange }) => {
   return (
     <input
-    id={styles.input}
-    className='form-control form-control-sm'
-    type="file" accept="image/*" onChange={handleImageChange} placeholder="Select an image (optional)" />
+      id={styles.imageInput}
+      className="rounded p-2 focus:outline-none focus:ring focus:border-blue-300"
+      type="file"
+      accept="image/*"
+      onChange={handleImageChange}
+      placeholder="Select an image (optional)"
+    />
   );
 };
 

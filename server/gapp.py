@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 
 # Load environment variables
-load_dotenv('.env.local')
+load_dotenv()
 
 # Configure the API key for google.generativeai
 genai.configure(api_key=os.getenv('API_KEY'))

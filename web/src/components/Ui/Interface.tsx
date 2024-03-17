@@ -70,6 +70,7 @@ function Interface() {
               spellCheck={false}
             />
             <button
+            id={styles.sendbutton}
               type="submit"
               title='send'
               disabled={!prompt && !imageFile}
@@ -90,7 +91,11 @@ function Interface() {
         handleImageChange={handleImageChange}
       />
     </form>
+    <div
+    id={styles.response}
+    className={`top-12`}>
       <ResponseComponent response={response} />
+      </div>
     </div>
   );
 }
