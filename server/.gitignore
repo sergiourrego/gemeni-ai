@@ -3,5 +3,6 @@ venv
 .venv
 
 # Ignore local environment variables file
+node_modules
 .env.local
 .env
