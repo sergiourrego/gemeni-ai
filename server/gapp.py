@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 
 # Load environment variables
-load_dotenv('.env.local')
+load_dotenv()
 
 # Configure the API key for google.generativeai
 genai.configure(api_key=os.getenv('API_KEY'))
@@ -13,8 +13,35 @@ genai.configure(api_key=os.getenv('API_KEY'))
 app = Flask(__name__)
 CORS(app)
 
+config = {
+  'temperature': 0,
+  'top_k': 20,
+  'top_p': 0.9,
+  'max_output_tokens': 4096,
+  'stop_sequences': ['<|END]|>']
+}
+
+safety_settings = [
+  {
+    "category": "HARM_CATEGORY_HARASSMENT",
+    "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+  },
+  {
+    "category": "HARM_CATEGORY_HATE_SPEECH",
+    "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+  },
+  {
+    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+    "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+  },
+  {
+    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+    "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+  }
+]
+
 # Initialize Gemini models without passing api_key as an argument
-gemini_pro = genai.GenerativeModel('gemini-pro')
+gemini_pro = genai.GenerativeModel('gemini-pro', generation_config=config, safety_settings=safety_settings)
 
 @app.route('/api/g/generate-text', methods=['POST'])
 def generate_text():
@@ -32,7 +59,7 @@ def generate_text():
 
 
 # Initialize Gemini models without passing api_key as an argument
-gemini_pro_vision = genai.GenerativeModel('gemini-pro-vision')
+gemini_pro_vision = genai.GenerativeModel('gemini-pro-vision', generation_config=config, safety_settings=safety_settings)
 
 @app.route('/api/g/generate-vision', methods=['POST'])
 def generate_vision():

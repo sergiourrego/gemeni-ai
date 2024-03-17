@@ -1,0 +1,46 @@
+Form {
+    position: absolute;
+    bottom: 1.55rem;
+    right: 22rem;
+}
+
+#prompttextare {
+    height: 55px;
+    width: 35rem;
+    overflow-y: auto;
+}
+
+/* Style the scrollbar */
+#prompttextare::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Track */
+#prompttextare::-webkit-scrollbar-track {
+    background: #000000; /* Color of the scrollbar track */
+    box-shadow: #382323 0px 0px 10px 0px inset;
+}
+
+/* Handle */
+#prompttextare::-webkit-scrollbar-thumb {
+    background: #464545; /* Color of the scrollbar handle */
+    cursor: auto !important;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#prompttextare::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle when hovered */
+}
+
+#sendbutton {
+    margin-right: 2px !important;
+    align-items: center !important;
+    justify-content: center;
+}
+
+#response {
+    position: fixed !important;
+    left: 40rem;
+    max-width: 32rem;
+}
