@@ -32,7 +32,7 @@ To run this project locally, follow these steps:
     ```
 
     ```bash
-    cp .env.example .env.local
+    cp .env.example .env
     ```
 
     ```bash
