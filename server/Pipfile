@@ -18,6 +18,8 @@ requests = "*"
 flask-cors = "*"
 python-dotenv = "*"
 google-generativeai = "*"
+waitress = "*"
+gevent = "*"
 
 [requires]
 PYTHON_VERSION = "*"
