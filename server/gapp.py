@@ -91,5 +91,9 @@ def generate_vision():
             "response": response.text
         })
 
+@app.route('/')
+def display_message():
+    return "This Method Isn't allowed"
+
 if __name__ == '__main__':
     app.run(debug=True)
