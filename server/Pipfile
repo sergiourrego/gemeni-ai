@@ -9,6 +9,8 @@ requests = "*"
 flask-cors = "*"
 python-dotenv = "*"
 google-generativeai = "*"
+waitress = "*"
+gevent = "*"
 
 [dev-packages]
 flask = "*"
