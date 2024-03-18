@@ -11,5 +11,11 @@ python-dotenv = "*"
 google-generativeai = "*"
 
 [dev-packages]
+flask = "*"
+requests = "*"
+flask-cors = "*"
+python-dotenv = "*"
+google-generativeai = "*"
 
 [requires]
+PYTHON_VERSION = "*"
