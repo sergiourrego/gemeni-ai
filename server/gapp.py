@@ -98,7 +98,10 @@ def display_message():
 
 if __name__ == '__main__':
     # Debug/Development
+    host = 'localhost'
+    port = 5000
+    print(f"App running on - http://{host}:{port}/")
     # app.run(debug=True, host="0.0.0.0", port="5000")
     # Production
-    http_server = WSGIServer(('', 5000), app)
+    http_server = WSGIServer(('', port), app)
     http_server.serve_forever()
