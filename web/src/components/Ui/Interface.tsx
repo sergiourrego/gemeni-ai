@@ -18,7 +18,7 @@ function Interface() {
         const formData = new FormData();
         formData.append('user_image', imageFile);
 
-        const res = await axios.post('/api/g/generate-vision', formData);
+        const res = await axios.post('/api/v1/g/generate-vision', formData);
         if (!res.data || res.data.response.trim() === '') {
           setResponse('Please provide more details of what you need.');
         } else {
@@ -35,7 +35,7 @@ function Interface() {
           return;
         }
 
-        const res = await axios.post('/api/g/generate-text', { prompt });
+        const res = await axios.post('/api/v1/g/generate-text', { prompt });
         if (!res.data || res.data.text.trim() === '') {
           setResponse('Please provide more details of what you need.');
         } else {
